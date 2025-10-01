@@ -25,13 +25,13 @@ FindProcs é uma ferramenta minimalista e *powerful* para Windows, escrita em C 
 
 ### Visual Studio (Developer Command Prompt)
 ```powershell
-cl /W4 /EHsc findprocs_by_name_wide.c
+cl /W4 /EHsc findprocs.c
 ````
 
 ### MinGW (exemplo)
 
 ```bash
-gcc -Wall -Wextra -municode -o findprocs_by_name_wide.exe findprocs_by_name_wide.c -ladvapi32
+gcc -Wall -Wextra -municode -o findprocs.exe findprocs.c -ladvapi32
 ```
 
 > Obs: `-municode` ajuda a usar `wmain`/Unicode em MinGW. O arquivo já define `_CRT_SECURE_NO_WARNINGS` para reduzir warnings sobre `_s` APIs.
@@ -42,13 +42,13 @@ gcc -Wall -Wextra -municode -o findprocs_by_name_wide.exe findprocs_by_name_wide
 
 ```powershell
 # buscar notepad e chrome
-findprocs_by_name_wide.exe notepad chrome
+findprocs.exe notepad chrome
 
 # aceitar .exe no argumento
-findprocs_by_name_wide.exe Notepad.exe Brave.exe
+findprocs.exe Notepad.exe Brave.exe
 
 # múltiplos alvos
-findprocs_by_name_wide.exe notepad chrome brave edge
+findprocs.exe notepad chrome brave edge
 ```
 
 Exemplo de saída:
